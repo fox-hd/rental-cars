@@ -10,6 +10,7 @@
 </dl>
 <%= link_to 'Voltar', car_categories_path %>
 <%= link_to 'Editar', edit_car_category_path(@car_category) %>
+<%= link_to 'Apagar', car_category_path(@car_category), method: :delete, data: {confirm: 'Tem certeza que deseja apagar?'} %>
 
 
 
