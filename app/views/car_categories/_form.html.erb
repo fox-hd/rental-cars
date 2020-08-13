@@ -1,0 +1,25 @@
+
+<% @car_category.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+<% end %>
+
+
+<%= form_with model: @car_category, local: true do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :daily_rate %>
+    <%= f.number_field :daily_rate %>
+  </div>
+  <div>
+    <%= f.label :car_insurance %>
+    <%= f.number_field :car_insurance %>
+  </div>
+  <div>
+    <%= f.label :third_party_insurance %>
+    <%= f.number_field :third_party_insurance %>
+  </div>
+    <%= f.submit 'Enviar' %>
+<% end %>
