@@ -17,6 +17,20 @@ class SubsidiariesController < ApplicationController
     redirect_to subsidiary_path(@subsidiary)
   end
 
+  def edit
+    @subsidiary = Subsidiary.find(params[:id])
+  end
+
+  def update
+    @subsidiary = Subsidiary.find(params[:id])
+    @subsidiary.update(subsidiary_params)
+    if @subsidiary.save
+      redirect_to @subsidiary
+    else
+      render :edit
+    end
+  end
+
   private
 
   def subsidiary_params

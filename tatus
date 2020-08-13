@@ -1,0 +1,71 @@
+[33mcommit d93abb38d0bc730c040e184811f84e2719a5f974[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 16:59:10 2020 -0300
+
+    Apagando categorias de carro
+
+[33mcommit 582d0386d1a66fec485610ea3a20886348e92846[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 16:38:02 2020 -0300
+
+    Editar categorias de carro
+
+[33mcommit 4a8df5413050e122739601633eade4af658b4790[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 12 22:44:33 2020 -0300
+
+    Adicionando I18n em categoria de carro
+
+[33mcommit abe5cb870f2ead8ce42efe8d9323c191aa759083[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 12 22:11:51 2020 -0300
+
+    Fechando rotas das categorias carro e filial
+
+[33mcommit 44da1aa3bfb348973024dd2860e83b4e0900476d[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 12 22:06:18 2020 -0300
+
+    Validação de categoria de carro
+
+[33mcommit fa150c8eff0fe1480d26b417e85ea472d34ddad5[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 11 11:38:16 2020 -0300
+
+    Cadastrar uma filial
+
+[33mcommit 8bff9c4faf1d8bf7613bed823c8871c91f56f4af[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Mon Aug 10 22:08:39 2020 -0300
+
+    Cadastrar uma categoria de carro
+
+[33mcommit c5fb296a31a7756e2b6b4ce3306e2c4dac89b405[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sun Aug 9 01:48:29 2020 -0300
+
+    Administrador vê todas filiais
+
+[33mcommit 49d90877cbd7884fefadbef4cda3544316157260[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sun Aug 9 00:13:32 2020 -0300
+
+    realocação do arquivo car_categories_controller para pasta controllers
+
+[33mcommit 6cc2678cfd99f24731528f09ef5942dcd89806b8[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 8 15:44:42 2020 -0300
+
+    Administrador vê todas categorias de carro
+
+[33mcommit 735f1341a55008626da306a42623908cb0a7c6be[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 8 14:12:08 2020 -0300
+
+    visitante abre o site
+
+[33mcommit 902998c79737e912a4c2f1d136546981b9d7f4a7[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 8 13:23:26 2020 -0300
+
+    primeiro commit
