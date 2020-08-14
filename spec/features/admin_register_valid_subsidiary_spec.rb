@@ -28,4 +28,31 @@ feature 'Admin register valid subsidiary' do
 
     expect(page).to have_content('não pode ficar em branco', count: 3)
   end
+
+  scenario 'and cnpj not is valid' do
+    
+    visit root_path
+    click_on 'Filiais'
+    click_on 'Registrar uma nova filial'
+    fill_in 'Nome', with: 'Campus code'
+    fill_in 'CNPJ', with: '50.668.157/0001-67'
+    fill_in 'Endereço', with: 'Alameda santos'
+    click_on 'Enviar'
+
+    expect(page).to have_content('não é válido')  
+  end
+  
+  scenario 'and cnpj must have 14 digits' do
+
+    visit root_path
+    click_on 'Filiais'
+    click_on 'Registrar uma nova filial'
+    fill_in 'Nome', with: 'Campus code'
+    fill_in 'CNPJ', with: '50.668.157/0001-6'
+    fill_in 'Endereço', with: 'Alameda santos'
+    click_on 'Enviar'
+
+    expect(page).to have_content('deve ter 14 digitos')
+      
+  end
 end

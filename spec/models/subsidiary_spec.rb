@@ -28,8 +28,23 @@ describe Subsidiary, type: :model do
 
       subsidiary.valid?
 
-      expect(subsidiary.errors[:name]).to include('já está em uso')
-    
+      expect(subsidiary.errors[:name]).to include('já está em uso')    
+    end
+     
+    it 'cnpj must have 14 digits' do
+      subsidiary = Subsidiary.new(name: 'Campus code', cnpj: '7304036000019', address: 'Alameda Santos')
+
+      subsidiary.valid?
+
+      expect(subsidiary.errors[:cnpj]).to include('deve ter 14 digitos')
+    end
+
+    it 'cnpj is not valid' do
+      subsidiary = Subsidiary.new(name: 'Campus code', cnpj: '73040360000193', address: 'Alameda Santos')
+
+      subsidiary.valid?
+
+      expect(subsidiary.errors[:cnpj]).to include('não é válido')
     end
 
 

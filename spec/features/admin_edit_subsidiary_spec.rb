@@ -37,9 +37,9 @@ feature 'Admin edits data subsidiary' do
   end
 
   scenario 'name and cnpj must be uniq' do
-    Subsidiary.create!(name: 'Campus Code', cnpj: '03.791.144/0001-00',
+    Subsidiary.create!(name: 'Campus Code', cnpj: '73.040.360/0001-90',
                        address: 'Av Paulista')
-    Subsidiary.create!(name: 'Family Code', cnpj: '03.791.144/0001-02',
+    Subsidiary.create!(name: 'Family Code', cnpj: '63.463.524/0001-39',
                        address: 'Av Consolação')
 
     visit root_path
@@ -47,7 +47,7 @@ feature 'Admin edits data subsidiary' do
     click_on 'Campus Code'
     click_on 'Editar'
     fill_in 'Nome', with: 'family Code'
-    fill_in 'CNPJ', with: '03.791.144/0001-02'
+    fill_in 'CNPJ', with: '63.463.524/0001-39'
     click_on 'Enviar'
 
     expect(page).to have_content('já está em uso', count: 2)
