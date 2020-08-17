@@ -23,4 +23,18 @@ feature 'Admin register car model' do
     expect(page).to have_content('Top')
     expect(page).to have_content('Flex')
   end
+
+  scenario 'must fill in all fields' do
+    visit root_path
+    click_on 'Modelos de carro'
+    click_on 'Registrar um modelo de carro'
+    click_on 'Enviar'
+
+    expect(page).to have_content('Nome não pode ficar em branco')
+    expect(page).to have_content('Ano não pode ficar em branco')
+    expect(page).to have_content('Fabricante não pode ficar em branco')
+    expect(page).to have_content('Motorização não pode ficar em branco')
+    expect(page).to have_content('Categoria de carro é obrigatório(a)')
+    expect(page).to have_content('Tipo de combustível não pode ficar em branco')    
+  end
 end
