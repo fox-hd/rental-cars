@@ -1,13 +1,27 @@
-<h1><%= @car_category.name %></h1>
 
-<dl>
-<dt><%= CarCategory.human_attribute_name(:daily_rate) %></dt>
-<dd><%= number_to_currency @car_category.daily_rate %></dd>
-<dt><%= CarCategory.human_attribute_name(:car_insurance) %></dt>
-<dd><%= number_to_currency @car_category.car_insurance %></dd>
-<dt><%= CarCategory.human_attribute_name(:third_party_insurance) %></dt>
-<dd><%= number_to_currency @car_category.third_party_insurance %></dd>
-</dl>
+<section>
+<h3><%= @car_category.name %></h3>
+  <dl>
+  <dt><%= CarCategory.human_attribute_name(:daily_rate) %></dt>
+  <dd><%= number_to_currency @car_category.daily_rate %></dd>
+  <dt><%= CarCategory.human_attribute_name(:car_insurance) %></dt>
+  <dd><%= number_to_currency @car_category.car_insurance %></dd>
+  <dt><%= CarCategory.human_attribute_name(:third_party_insurance) %></dt>
+  <dd><%= number_to_currency @car_category.third_party_insurance %></dd>
+  </dl>
+</section>
+
+<section>
+  <h3>Modelos de carro para essa categoria</h3>
+  <% @car_models.each do |car_model| %>
+    <div>
+      <%= car_model.name %>
+      <%= car_model.year %>
+      <%= car_model.manufacturer %>
+    </div>
+  <% end %>
+</section><br>
+
 <%= link_to 'Voltar', car_categories_path %>
 <%= link_to 'Editar', edit_car_category_path(@car_category) %>
 <%= link_to 'Apagar', car_category_path(@car_category), method: :delete, data: {confirm: 'Tem certeza que deseja apagar?'} %>
