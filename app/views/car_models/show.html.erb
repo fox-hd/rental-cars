@@ -11,3 +11,6 @@
   <dt><%= CarModel.human_attribute_name(:fuel_type) %></dt>
   <dd><%= @car_model.fuel_type %></dd>
 </dl>
+
+<%= link_to 'Voltar', car_models_path %>
+<%= link_to 'Editar', edit_car_model_path(@car_model) %>
