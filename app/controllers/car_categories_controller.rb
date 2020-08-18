@@ -6,7 +6,7 @@ class CarCategoriesController < ApplicationController
 
   def show
     @car_category = CarCategory.find(params[:id])
-    @car_models = CarModel.all
+    @car_models = @car_category.car_models
   end
 
   def new
