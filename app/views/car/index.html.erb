@@ -1,0 +1,7 @@
+<% if @cars.empty? %>
+<h3>Nenhuma frota de carro cadastrada</h3>
+<% else %>
+  <% @cars.each do |car| %>
+    <%= car.subsidiary.name %>
+  <% end %>
+<% end %>

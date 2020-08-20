@@ -1,4 +1,6 @@
 class Subsidiary < ApplicationRecord
+  has_many :cars
+  
   validates :name, :cnpj, :address, presence: :true
   validates :name, :cnpj, uniqueness: {case_sensitive: false }
   validate :cnpj_must_be_valid
