@@ -1,12 +1,22 @@
 require 'rails_helper'
 
 feature 'Admin edits car model' do
+  scenario 'must be sign in' do
+    
+    visit root_path
+    click_on 'Categorias'
+
+    expect(current_path).to eq new_user_session_path
+  end
+
   scenario 'successfully' do
     car_category = CarCategory.create!(name: 'Top', daily_rate: 200, car_insurance: 50,
                         third_party_insurance: 20)
     CarModel.create!(name: 'Ka', year: 2019, manufacturer: 'Ford',
                      motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
     click_on 'Ka - 2019'
@@ -29,7 +39,9 @@ feature 'Admin edits car model' do
                         third_party_insurance: 20)
     CarModel.create!(name: 'Ka', year: 2019, manufacturer: 'Ford',
                      motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
     click_on 'Ka - 2019'

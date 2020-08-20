@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 feature 'Admin view car model' do
+  scenario 'must be sign in' do
+    
+    visit root_path
+    click_on 'Categorias'
+
+    expect(current_path).to eq new_user_session_path
+  end
+
   scenario 'and view list' do
     car_category = CarCategory.create!(name: 'Top', daily_rate: 200, car_insurance: 50,
                         third_party_insurance: 20)
@@ -8,7 +16,9 @@ feature 'Admin view car model' do
                      motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
     CarModel.create!(name: 'Onix', year: 2020, manufacturer: 'Chevrolet',
                      motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
 
@@ -29,7 +39,9 @@ feature 'Admin view car model' do
                      motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
     CarModel.create!(name: 'Onix', year: 2020, manufacturer: 'Chevrolet',
                      motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
     click_on 'Ka - 2019'
@@ -45,7 +57,9 @@ feature 'Admin view car model' do
   end
 
   scenario 'and nothing is registered' do
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
 

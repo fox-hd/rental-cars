@@ -1,10 +1,20 @@
 require 'rails_helper'
 
 feature 'Admin register car model' do
+  scenario 'must be sign in' do
+    
+    visit root_path
+    click_on 'Categorias'
+
+    expect(current_path).to eq new_user_session_path
+  end
+  
   scenario 'successfully' do
     CarCategory.create!(name: 'Top', daily_rate: 100, car_insurance: 50,
                                        third_party_insurance: 50)
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
     click_on 'Registrar um modelo de carro'
@@ -25,6 +35,9 @@ feature 'Admin register car model' do
   end
 
   scenario 'must fill in all fields' do
+    user = User.create!(name: 'João Almeida', email:'joao@gmail.com', password:'123456')
+
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Modelos de carro'
     click_on 'Registrar um modelo de carro'
