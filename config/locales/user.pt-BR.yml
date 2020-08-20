@@ -1,0 +1,12 @@
+---
+
+pt-BR:
+  activerecord:
+    models:
+      user: Modelo de carro
+    attributes:
+      user:
+        name: Nome
+        email: Email
+        password: Senha
+        
