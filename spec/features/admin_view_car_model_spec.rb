@@ -4,7 +4,7 @@ feature 'Admin view car model' do
   scenario 'must be sign in' do
     
     visit root_path
-    click_on 'Categorias'
+    click_on 'Modelos de carro'
 
     expect(current_path).to eq new_user_session_path
   end

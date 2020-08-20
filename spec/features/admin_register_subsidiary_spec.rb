@@ -1,7 +1,19 @@
 require 'rails_helper'
 
 feature 'Admin register subsidiary' do
+  scenario 'must be sign in' do
+    
+    visit root_path
+    click_on 'Filiais'
+
+    expect(current_path).to eq new_user_session_path
+  end
+
   scenario 'from index page' do
+
+    user = User.create!(name: 'João Almeida', email: 'joao@gmail.com', password: '123456')
+
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Filiais'
 
@@ -10,6 +22,10 @@ feature 'Admin register subsidiary' do
   end
 
   scenario 'sucessfully' do
+
+    user = User.create!(name: 'João Almeida', email: 'joao@gmail.com', password: '123456')
+
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Filiais'
     click_on 'Registrar uma nova filial'

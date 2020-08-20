@@ -1,10 +1,20 @@
 require 'rails_helper'
 
 feature 'Admin edits data subsidiary' do
+  scenario 'must be sign in' do
+    
+    visit root_path
+    click_on 'Filiais'
+
+    expect(current_path).to eq new_user_session_path
+  end
+
   scenario 'successfully' do
     Subsidiary.create!(name: 'Campus Code', cnpj: '03.791.144/0001-00',
                        address: 'Av')
+    user = User.create!(name: 'João Almeida', email: 'joao@gmail.com', password: '123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Filiais'
     click_on 'Campus Code'
@@ -23,7 +33,9 @@ feature 'Admin edits data subsidiary' do
   scenario 'attributes cannot be blank' do
     Subsidiary.create!(name: 'Campus Code', cnpj: '03.791.144/0001-00',
                        address: 'Av')
+    user = User.create!(name: 'João Almeida', email: 'joao@gmail.com', password: '123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Filiais'
     click_on 'Campus Code'
@@ -41,7 +53,9 @@ feature 'Admin edits data subsidiary' do
                        address: 'Av Paulista')
     Subsidiary.create!(name: 'Family Code', cnpj: '63.463.524/0001-39',
                        address: 'Av Consolação')
+    user = User.create!(name: 'João Almeida', email: 'joao@gmail.com', password: '123456')
 
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Filiais'
     click_on 'Campus Code'
