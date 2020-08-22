@@ -2,6 +2,7 @@
 <h3>Nenhuma frota de carro cadastrada</h3>
 <% else %>
   <% @cars.each do |car| %>
-    <%= car.subsidiary.name %>
+    <%= link_to car.subsidiary.name , car %><br>
   <% end %>
 <% end %>
+<%= link_to 'Registrar novo carro', new_car_path %>

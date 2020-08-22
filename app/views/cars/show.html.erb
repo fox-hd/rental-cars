@@ -1,0 +1,22 @@
+<h3>Frota de carros da <%= @car.subsidiary.name %></h3>
+
+<dl>
+  <dt><%= CarCategory.human_attribute_name(:name) %></dt>
+  <dd><%= @car.car_model.car_category.name %></dd>
+  <dt><%= CarModel.human_attribute_name(:name) %></dt>
+  <dd><%= @car.car_model.name %></dd>
+  <dt><%= CarModel.human_attribute_name(:year) %></dt>
+  <dd><%= @car.car_model.year %></dd>
+  <dt><%= CarModel.human_attribute_name(:manufacturer) %></dt>
+  <dd><%= @car.car_model.manufacturer %></dd>
+  <dt><%= Car.human_attribute_name(:license_plate) %></dt>
+  <dd><%= @car.license_plate %></dd>
+  <dt><%= Car.human_attribute_name(:color) %></dt>
+  <dd><%= @car.color %></dd>
+  <dt><%= Car.human_attribute_name(:mileage) %></dt>
+  <dd><%= @car.mileage %></dd>
+</dl>
+
+<%= link_to 'Voltar', cars_path %>
+<%= link_to 'Editar', edit_car_path%>
+<%= link_to 'Apagar', car_path(@car), method: :delete, data:{confirm: 'tem certeza que deseja apagar?'} %>
