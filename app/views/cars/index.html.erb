@@ -1,8 +1,15 @@
+<h3>Frota de carros por Filial</h3>
 <% if @cars.empty? %>
 <h3>Nenhuma frota de carro cadastrada</h3>
-<% else %>
-  <% @cars.each do |car| %>
-    <%= link_to car.subsidiary.name , car %><br>
-  <% end %>
 <% end %>
-<%= link_to 'Registrar novo carro', new_car_path %>
+
+<% @subsidiaries.each do |subsidiary| %>
+  <%= subsidiary.name %><br>
+    <% @cars.each do |car| %>
+      <% if car.subsidiary.name == subsidiary.name %>
+        <%= link_to "#{car.car_model.name} | Placa: #{car.license_plate}", car %><br>
+      <% end %>
+    <% end %> <br>
+<% end %>
+<%= link_to 'Registrar novo carro', new_car_path %><br>
+<%= link_to 'Voltar', root_path %>

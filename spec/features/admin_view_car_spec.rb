@@ -23,7 +23,7 @@ feature 'Admin view car' do
 
     visit root_path
     click_on 'Frota de carro'
-    click_on 'Unidas'
+    click_on 'Ka'
     
     expect(page).to have_content('Unidas')
     expect(page).to have_content('Top')

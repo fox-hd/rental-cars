@@ -3,6 +3,7 @@ class CarsController < ApplicationController
   
   def index
     @cars = Car.all
+    @subsidiaries = Subsidiary.all
   end
 
   def show

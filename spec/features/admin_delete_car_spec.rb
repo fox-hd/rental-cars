@@ -20,13 +20,13 @@ feature 'admin delete car' do
                 car_model: car_model , mileage: 1000, subsidiary: subsidiary)
     user = User.create!(name: 'João Almeida', email: 'joao@gmail.com', password: '123456')
                     
-                        login_as(user, scope: :user)
+    login_as(user, scope: :user)
     visit root_path
     click_on 'Frota de carro'
-    click_on 'Unidas'
+    click_on 'Ka'
     click_on 'Apagar'
 
-    expect(page).not_to have_content('Unidas')
+    expect(page).not_to have_content('Ka')
     expect(page).to have_content('Localiza')
   end
 end

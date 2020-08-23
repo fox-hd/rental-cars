@@ -30,7 +30,7 @@ feature 'admin edit car' do
     login_as(user, scope: :user)
     visit root_path
     click_on 'Frota de carro'
-    click_on 'Unidas'
+    click_on 'Ka'
     click_on 'Editar'
     fill_in 'Placa', with: 'FHI9900'
     fill_in 'Cor', with: 'Preto'
@@ -61,7 +61,7 @@ feature 'admin edit car' do
     login_as(user, scope: :user)
     visit root_path
     click_on 'Frota de carro'
-    click_on 'Unidas'
+    click_on 'Ka'
     click_on 'Editar'
     fill_in 'Placa', with: ''
     fill_in 'Cor', with: ''
