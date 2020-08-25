@@ -27,7 +27,11 @@ class RentalsController < ApplicationController
     end
   end
 
-  private 
+  def search
+    @rentals = Rental.where(token: params[:q])
+  end
+
+  private
   def rental_params
     params.require(:rental).permit(:start_date, :end_date, 
                                    :client_id, :car_category_id)

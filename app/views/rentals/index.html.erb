@@ -3,7 +3,7 @@
 <% if @rentals.empty? %>
   <h3>Não há nenhuma locação agendada</h3>
 <% end %>
-
+<div>
 <% @rentals.each do |rental| %>
   <dl>
     <dt><%= Rental.human_attribute_name(:name) %></dt>
@@ -16,3 +16,12 @@
     <dd><%= rental.client.cpf %></dd>
   </dl>
 <% end %>
+</div>
+
+<div>
+  <%= form_with url: rentals_search_path, method: :get, local: true do |f| %>
+    <%= f.label :q, 'Busca de locação' %>
+    <%= f.text_field :q %>
+    <%= f.submit 'Buscar' %>
+  <% end %>
+</div>
