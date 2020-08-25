@@ -6,10 +6,8 @@ pt-BR:
       rental: Locação
     attributes:
       rental:
-        name: Nome
-        motorization: Motorização
-        manufacturer: Fabricante
-        year: Ano
-        fuel_type: Tipo de combustível
-        car_category: Categoria de carro
-        car_category_id: Categoria de carro
+        start_date: Data de início
+        end_date: Data de término
+        client_id: Cliente
+        user_id: Usuário
+        car_category_id: Categoria

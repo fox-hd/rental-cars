@@ -1,1 +1,18 @@
 <%= link_to 'Agendar nova locação', new_rental_path %>
+
+<% if @rentals.empty? %>
+  <h3>Não há nenhuma locação agendada</h3>
+<% end %>
+
+<% @rentals.each do |rental| %>
+  <dl>
+    <dt><%= Rental.human_attribute_name(:name) %></dt>
+    <dd><%= rental.client.name %></dd>
+    <dt><%= Rental.human_attribute_name(:start_date) %></dt>
+    <dd><%= l rental.start_date %></dd>
+    <dt><%= Rental.human_attribute_name(:end_date) %></dt>
+    <dd><%= l rental.end_date %></dd>
+    <dt><%= Rental.human_attribute_name(:cpf) %></dt>
+    <dd><%= rental.client.cpf %></dd>
+  </dl>
+<% end %>
