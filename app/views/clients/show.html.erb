@@ -1,0 +1,16 @@
+<h3>Cliente cadastrado</h3>
+
+<div>
+  <dl>
+    <dt><%= Client.human_attribute_name(:name) %></dt>
+    <dd><%= @client.name %></dd>
+    <dt><%= Client.human_attribute_name(:cpf) %></dt>
+    <dd><%= @client.cpf %></dd>
+    <dt><%= Client.human_attribute_name(:email) %></dt>
+    <dd><%= @client.email %></dd>  
+  </dl>
+</div>
+
+<%= link_to 'Voltar', clients_path %>
+<%= link_to 'Editar', edit_client_path(@client) %>
+<%= link_to 'Apagar', client_path(@client), method: :delete, data:{confirm: 'tem certeza que deseja apagar?'} %>
