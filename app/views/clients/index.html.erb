@@ -4,11 +4,18 @@
 
 <% @clients.each do |client| %>
   <div>
-    <%= link_to client.name, client %> 
-    <%= client.email %>
+    <%= link_to client.name, client %><br>
+    <%= client.email %><br>
     <%= client.cpf %>
   </div>
-<% end %>
+<% end %><br>
 
 <%= link_to 'Cadastrar novo cliente', new_client_path %>
+
+
+<%= form_with url:clients_search_path, method: :get, local:true do |f| %>
+  <%= f.label :q, 'Buscar nome do cliente:' %>
+  <%= f.text_field :q %>
+  <%= f.submit 'Buscar' %>
+<% end %>
 <%= link_to 'Voltar', root_path %>

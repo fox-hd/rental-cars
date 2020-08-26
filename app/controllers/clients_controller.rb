@@ -42,6 +42,10 @@ class ClientsController < ApplicationController
     redirect_to clients_path
   end
 
+  def search
+    @clients = Client.where('name like ?', "%#{params[:q]}%") 
+  end
+
   private
 
   def client_params

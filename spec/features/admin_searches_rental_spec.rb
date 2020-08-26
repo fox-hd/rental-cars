@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Admin searche rental' do
+feature 'Admin search rental' do
   scenario 'and find exact match' do
     client = Client.create!(name: 'Fulano Sicrano', cpf: '512.129.580-47', 
                             email: 'test@client.com')

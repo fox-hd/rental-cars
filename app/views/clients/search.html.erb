@@ -1,0 +1,18 @@
+<h3>Resultados da sua busca</h3>
+<% if @clients.empty? %>
+  <h3>nenhum cliente encontrado</h3>
+<% end %>
+
+<% @clients.each do |client| %>
+<div>
+  <dl>
+    <dt><%= Client.human_attribute_name(:name) %></dt>
+    <dd><%= client.name %></dd>
+    <dt><%= Client.human_attribute_name(:cpf) %></dt>
+    <dd><%= client.cpf %></dd>
+    <dt><%= Client.human_attribute_name(:email) %></dt>
+    <dd><%= client.email %></dd>  
+  </dl>
+</div>
+<% end %>
+<%= link_to 'Voltar', clients_path %>
