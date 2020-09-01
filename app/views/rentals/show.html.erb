@@ -1,5 +1,5 @@
 <h1>Locação</h1>
-
+<h2>dados do agendamento</h2>
 <dl>
   <dt> <%= Rental.human_attribute_name(:start_date) %> </dt>
   <dd> <%=  l @rental.start_date %> </dd>
@@ -13,4 +13,18 @@
   <dd> <%= @rental.car_category.name %> </dd>
   <dt>Previsão de valor</dt>
   <dd> <%= number_to_currency @rental.total %> </dd>
+  <dd>Token</dd>
+  <dt><%= @rental.token %></dt>
+  <dd>Usuário</dd>
+  <dt><%= @rental.user.email%></dt>
 </dl>
+<% if @rental.car_rental %>
+  <h2>Locação iniciada</h2>
+  Carro escolhido: <%= @rental.car_rental.car.description %>
+  Usuário: <%= @rental.car_rental.user.email %>
+  CNH do condutor: <%= @rental.car_rental.driver_license_number %>
+  Inicio da locação <%= l @rental.car_rental.start_date %>
+<% else %>
+  <%= link_to 'Iniciar locação', new_rental_car_rental_path(@rental.id) %>
+<% end %>
+

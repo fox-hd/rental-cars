@@ -47,4 +47,20 @@ describe Car, type: :model do
         expect(car.errors[:mileage]).to include('deve ser maior que 0')
       end
   end
+  context 'description' do
+    it 'should return car model name, color and license plate' do
+      car_category = CarCategory.create!(name: 'A', car_insurance: 100, 
+                                         daily_rate: 50, third_party_insurance: 30)
+      car_model = CarModel.create!(name: 'Ka', year: 2019, manufacturer: 'Ford',
+                                  motorization: '1.0', car_category: car_category, fuel_type: 'Flex')
+      subsidiary = Subsidiary.create!(name: 'Unidas', cnpj: '63.463.524/0001-39',
+                                      address: 'Rua Santiago')
+      car =  Car.new(license_plate: 'ABC123', color: 'Prata',
+                     car_model: car_model, mileage: 100, subsidiary: subsidiary)
+
+      result = car.description
+
+      expect(result).to eq 'Ka - Prata - ABC123'
+    end
+  end
 end
