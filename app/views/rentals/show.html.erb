@@ -24,6 +24,7 @@
   Usuário: <%= @rental.car_rental.user.email %>
   CNH do condutor: <%= @rental.car_rental.driver_license_number %>
   Inicio da locação <%= l @rental.car_rental.start_date %>
+  <p>Em andamento</p>
 <% else %>
   <%= link_to 'Iniciar locação', new_rental_car_rental_path(@rental.id) %>
 <% end %>

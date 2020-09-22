@@ -1,0 +1,239 @@
+[33mcommit d85829b2fa08a91d47ef5059b071aad9159ca560[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Sep 3 02:15:45 2020 -0300
+
+    Busca parcial do token e nome do cliente
+
+[33mcommit e4372d55a38488d0419fac5412a3d7c90e1108dd[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Sep 1 00:40:38 2020 -0300
+
+    Usuario inicia locação
+
+[33mcommit 2c0fa21d103013b4cea982943b3bfe1b8a7487d9[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 26 12:04:52 2020 -0300
+
+    Buscar cliente
+
+[33mcommit 2a047cb810a09002b490bac92a7b9d74a849c6c4[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 26 00:28:30 2020 -0300
+
+    Cadastra, edita e deleta cliente
+
+[33mcommit 40dc910cf905818311fef26972d6d9a67ac9d61c[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 25 17:03:32 2020 -0300
+
+    Busca de locações exatas
+
+[33mcommit cc46f6bf189561e8b33a2d52727e307e2a50c24e[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 25 16:08:25 2020 -0300
+
+    Gerar o token na locação
+
+[33mcommit 7532f6ddf9bbd829408c0cdb1129fbc557aa19da[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 25 14:58:59 2020 -0300
+
+    Teste de integração e unitário para agendamento de locação
+
+[33mcommit 86bea245f88ce1a77901705bfd1bdfa6741ea31b[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Mon Aug 24 13:51:24 2020 -0300
+
+    Agendamento de locação com sucesso
+
+[33mcommit c0da81fb7f6302ae4236989f0daea3afe2e15535[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sun Aug 23 00:44:08 2020 -0300
+
+    refatorando view index
+
+[33mcommit 209bf2cfa66b619dc050b72ecb070d0140cf2b31[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sun Aug 23 00:17:13 2020 -0300
+
+    Admin deleta filial
+
+[33mcommit 404aa255729e4607374f6f7100d909cdd910fbd1[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 22 20:48:21 2020 -0300
+
+    CRUD, testes integrados e unitarios para model car
+
+[33mcommit 58f12b1cfb252c8d72725ee6e5b62b1238799745[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 22 08:51:28 2020 -0300
+
+    Corrigindo o nome das  views, controller e routes de car para cars
+
+[33mcommit 706581a5c4890e13f090b75b00cd0667a38f2b11[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 20 18:41:46 2020 -0300
+
+    WIP Admin cadastra carro para frota
+
+[33mcommit 2ef6bfef4d81822e90ecbc00d932acc2279d0a06[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 20 13:54:12 2020 -0300
+
+    login obrigario nos testes subsidiary e correção do login em car model
+
+[33mcommit 9ddb810fd8159713b272fc07b4e518f2fd3d579e[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 20 13:38:46 2020 -0300
+
+    login obrigario nos testes de car model
+
+[33mcommit e007b1470eb33a769235e8f24fbb7aa3e4ab41f4[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 20 13:26:34 2020 -0300
+
+    Login obrigatorio nos teste de car category
+
+[33mcommit 68491a30100e43c6304548e62b1c2a2e0598e404[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 20 02:41:19 2020 -0300
+
+    login obrigatorio em car category
+
+[33mcommit 909e5f99953f12a8ee56564cae2f54a1d3bbf5da[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 20 01:41:43 2020 -0300
+
+    Setup Devise; add sign feature
+
+[33mcommit da9406ab8a8788c1928dbda98e3feaac6fc2f6d5[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 18 13:51:40 2020 -0300
+
+    Teste unitario para validação de modelos de carro
+
+[33mcommit ff73fb828f8ec4f36bad6b02049104d6feac52dc[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 18 12:36:53 2020 -0300
+
+    Editando um modelo de carro
+
+[33mcommit c7ee9ff60c577fc23a6273ce94ae0902b16a09aa[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 18 11:21:07 2020 -0300
+
+    correção: Admin vê todos os modelos de carros de uma categoria
+
+[33mcommit d878b0e11f7b9b8a472e296c82b86f5db46b8518[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 18 01:52:26 2020 -0300
+
+    Admin vê todos os modelos de carros de uma categoria
+
+[33mcommit cbe3c72bfb3eaa277314631c829c3f821b8045db[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Mon Aug 17 17:34:58 2020 -0300
+
+    Validação de modelo de carro
+
+[33mcommit ca24fca6ad5dced11b441020b79bd78885bc3550[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Mon Aug 17 16:48:27 2020 -0300
+
+    Registro de carro feito com sucesso
+
+[33mcommit 8a43845c881d4d223bbb6153128edd2153248ee4[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Mon Aug 17 11:32:04 2020 -0300
+
+    Vê modelos de carro
+
+[33mcommit 51cd920aec1d8a82f8024e37435720d1fdd94cef[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 23:32:36 2020 -0300
+
+    Adicionado validação bonus para filial
+
+[33mcommit 694aeb074c2a37a06bcde56f44d94c10ea91b03a[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 21:41:24 2020 -0300
+
+    Validar dados da filial
+
+[33mcommit 49ee0301071fa6e06b95469b696d8bf5bbf41f25[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 20:22:35 2020 -0300
+
+    Editando uma filial
+
+[33mcommit d93abb38d0bc730c040e184811f84e2719a5f974[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 16:59:10 2020 -0300
+
+    Apagando categorias de carro
+
+[33mcommit 582d0386d1a66fec485610ea3a20886348e92846[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Thu Aug 13 16:38:02 2020 -0300
+
+    Editar categorias de carro
+
+[33mcommit 4a8df5413050e122739601633eade4af658b4790[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 12 22:44:33 2020 -0300
+
+    Adicionando I18n em categoria de carro
+
+[33mcommit abe5cb870f2ead8ce42efe8d9323c191aa759083[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 12 22:11:51 2020 -0300
+
+    Fechando rotas das categorias carro e filial
+
+[33mcommit 44da1aa3bfb348973024dd2860e83b4e0900476d[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Wed Aug 12 22:06:18 2020 -0300
+
+    Validação de categoria de carro
+
+[33mcommit fa150c8eff0fe1480d26b417e85ea472d34ddad5[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Tue Aug 11 11:38:16 2020 -0300
+
+    Cadastrar uma filial
+
+[33mcommit 8bff9c4faf1d8bf7613bed823c8871c91f56f4af[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Mon Aug 10 22:08:39 2020 -0300
+
+    Cadastrar uma categoria de carro
+
+[33mcommit c5fb296a31a7756e2b6b4ce3306e2c4dac89b405[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sun Aug 9 01:48:29 2020 -0300
+
+    Administrador vê todas filiais
+
+[33mcommit 49d90877cbd7884fefadbef4cda3544316157260[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sun Aug 9 00:13:32 2020 -0300
+
+    realocação do arquivo car_categories_controller para pasta controllers
+
+[33mcommit 6cc2678cfd99f24731528f09ef5942dcd89806b8[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 8 15:44:42 2020 -0300
+
+    Administrador vê todas categorias de carro
+
+[33mcommit 735f1341a55008626da306a42623908cb0a7c6be[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 8 14:12:08 2020 -0300
+
+    visitante abre o site
+
+[33mcommit 902998c79737e912a4c2f1d136546981b9d7f4a7[m
+Author: ueslei neves <unp1210@gmail.com>
+Date:   Sat Aug 8 13:23:26 2020 -0300
+
+    primeiro commit

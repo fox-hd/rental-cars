@@ -8,6 +8,19 @@ class Rental < ApplicationRecord
 
   before_create :generate_token
 
+  #def scheduled?
+  #  car_rented.blank?
+  #end
+
+  #def in_progress?
+  #  car_rental && car_rental.end_date.blank?
+  #end
+
+  #def finalized?
+  #  car_rental && car_rental.end_date.presente?
+  #end
+  
+
   def total
     number_of_days_rental = end_date - start_date
     daily_rate = car_category.daily_price
