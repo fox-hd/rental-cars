@@ -14,5 +14,10 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
   
+  namespace :api do
+    namespace :v1 do
+      resources :cars, only: %i[index]
+    end
+  end
   
 end
