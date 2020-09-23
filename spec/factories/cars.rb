@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :car do
-    license_plate {'ABC1234'}
+    sequence(:license_plate) {|i| "ABC123#{i}"}
     mileage { 1000 }
     color {'Vermelho'}
     status { :available }

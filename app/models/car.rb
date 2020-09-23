@@ -12,4 +12,8 @@ class Car < ApplicationRecord
     def description
       "#{car_model.name} - #{color} - #{license_plate}"
     end
+
+    #def as_json(options={})
+      #super(options.merge(include: :car_model, expect: :car_model_id)) **o metodo as_json pode ser sobrescrito aqui*
+    #end
 end
