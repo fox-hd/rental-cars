@@ -1,5 +1,5 @@
 class CarCategoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!, only: [:index, :show, :new, :create, :update]
 
   def index
     @car_categories = CarCategory.all

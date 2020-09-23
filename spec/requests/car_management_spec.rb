@@ -64,9 +64,7 @@ describe 'Car management' do
       it 'return status code 404' do
         get '/api/v1/cars/000'
 
-        expect(response).to have_http_status(:not_found)
-        #expect(response).to have_http_status(404)
-        #expect(response).to be_not_found
+        expect(response).to be_not_found
       end
 
       it 'return not found message' do
@@ -86,7 +84,6 @@ describe 'Car management' do
 
       it 'returns 201 status' do
         post '/api/v1/cars', params: {car: attributes}
-
         expect(response).to be_created
         #expect(response).to have_http_status(201)
       end
@@ -111,14 +108,14 @@ describe 'Car management' do
       end
 
       it 'without requested params' do
-        post '/api/v1/cars', params: {car:{foo: 'bar'}}
+        post '/api/v1/cars', params: {car: {foo: 'sdasd'}}
 
         expect(response).to have_http_status(:unprocessable_entity)
         #expect(response).to be_unprocessable_entity
         expect(response.body).to include('Placa do carro não pode ficar em branco')
         expect(response.body).to include('Cor não pode ficar em branco')
         expect(response.body).to include('Modelo do carro é obrigatório(a)')
-          expect(response.body).to include('Filial é obrigatório(a)')
+        expect(response.body).to include('Filial é obrigatório(a)')
       end
     end
   end

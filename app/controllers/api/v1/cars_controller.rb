@@ -1,5 +1,4 @@
 class Api::V1::CarsController < Api::V1::ApiController
-  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
 
   def index
     render json: Car.available, status: 200
@@ -12,10 +11,8 @@ class Api::V1::CarsController < Api::V1::ApiController
 
     #render status: :not_found, json: ''
     @car = Car.find(params[:id])
-    render json: @car
+    render json: @car if @car
   #rescue StandardError -> Ruby herda dessa classe - resgata todos os erros mas nao é o ideal
-  
-    
   end
 
   def create
@@ -27,15 +24,10 @@ class Api::V1::CarsController < Api::V1::ApiController
     #end
     @car = Car.new(car_params)
     @car.save
-    byebug
     render status: :created, json: @car
-
-  rescue ActiveRecord::RecordInvalid
-    render status: :unprocessable_entity, json: @car.errors.full_messages
 
   rescue ActionController::ParameterMissing
     render status: :precondition_failed, json: 'Parâmetros inválidos'
-    
   end
 
 
