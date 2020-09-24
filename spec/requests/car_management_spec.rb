@@ -77,13 +77,14 @@ describe 'Car management' do
 
   context 'POST /cars' do
     context 'with valid parameters' do
-      let(:subsidiary) { create(:subsidiary) }
+      let(:subsidiary) { create(:subsidiary)}
       let(:car_model) { create(:car_model)}
       let(:attributes) { attributes_for(:car, car_model_id: car_model.id,
                                          subsidiary_id: subsidiary.id) } #hash com os atributos do carro
 
       it 'returns 201 status' do
         post '/api/v1/cars', params: {car: attributes}
+      
         expect(response).to be_created
         #expect(response).to have_http_status(201)
       end
@@ -92,10 +93,11 @@ describe 'Car management' do
         post '/api/v1/cars', params: {car: attributes}
 
         car = JSON.parse(response.body, symbolize_names: true)
-        #expect(car[:id]).to be_present
+        expect(car[:id]).to be_present
         expect(car[:license_plate]).to eq(attributes[:license_plate])
         expect(car[:color]).to eq(attributes[:color])
         expect(car[:car_model_id]).to eq(attributes[:car_model_id])
+        expect(car[:subsidiary_id]).to eq(attributes[:subsidiary_id])
       end
     end
 

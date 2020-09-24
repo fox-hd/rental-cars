@@ -23,7 +23,7 @@ class Api::V1::CarsController < Api::V1::ApiController
     #  render status: :unprocessable_entity, json: @car.errors.full_messages
     #end
     @car = Car.new(car_params)
-    @car.save
+    @car.save!
     render status: :created, json: @car
 
   rescue ActionController::ParameterMissing
@@ -34,7 +34,7 @@ class Api::V1::CarsController < Api::V1::ApiController
   private
 
   def car_params
-    params.require(:car).permit(:license_plate, :color, :mileage, :car_model_id, :subsidary_id)
+    params.require(:car).permit(:license_plate, :color, :mileage, :car_model_id, :subsidiary_id)
   end
 
 
