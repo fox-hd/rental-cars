@@ -45,4 +45,20 @@ feature 'Admin register manufacturer' do
     expect(page).to have_content('R$ 10,00')
     expect(page).to have_link('Voltar')
   end
+
+  scenario 'and price must be greater than zero' do
+    user = create(:user)
+    login_as user, scope: :user
+
+    visit root_path
+    click_on 'Categorias'
+    click_on 'Registrar uma nova categoria'
+    fill_in 'Nome', with: 'Flex'
+    fill_in 'Diária', with: '0'
+    fill_in 'Seguro do carro', with: '0'
+    fill_in 'Seguro para terceiros', with: '0'
+    click_on 'Enviar'
+
+    expect(page).to have_content('deve ser maior que 0', count:3)
+  end
 end

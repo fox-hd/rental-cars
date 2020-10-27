@@ -68,7 +68,7 @@ describe 'Car management' do
       end
 
       it 'return not found message' do
-        get '/api/v1/cars/000'
+        get '/api/v1/cars/000' 
 
         expect(response.body).to include('Carro não encontrado')
       end

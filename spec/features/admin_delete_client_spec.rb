@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'admin delele client' do
 
-  scenario 'mus be sign in' do
+  scenario 'must be sign in' do
     visit root_path
     click_on 'Modelos de carro'
 
