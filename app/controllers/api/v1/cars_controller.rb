@@ -1,8 +1,8 @@
 class Api::V1::CarsController < Api::V1::ApiController
 
   def index
-    render json: Car.available, status: 200
-    #render json: Car.available.as_json(include: {car_model: {include: :car_category}}, except: :car_model_id), status: 200
+    #render json: Car.available, status: 200
+    render json: Car.available.as_json(include: {car_model: {include: :car_category}}, except: :car_model_id), status: 200
   end
 
   def show
